@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MongoDB.OData</name>
+    </assembly>
+    <members>
+        <member name="T:MongoDB.OData.MongoCollectionAttribute">
+            <summary>
+            Defines the mongodb collection to use.
+            </summary>
+        </member>
+        <member name="M:MongoDB.OData.MongoCollectionAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MongoDB.OData.MongoCollectionAttribute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:MongoDB.OData.MongoCollectionAttribute.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="T:MongoDB.OData.MongoDatabaseAttribute">
+            <summary>
+            Defines the mongodb database to use.
+            </summary>
+        </member>
+        <member name="M:MongoDB.OData.MongoDatabaseAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MongoDB.OData.MongoDatabaseAttribute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:MongoDB.OData.MongoDatabaseAttribute.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="T:MongoDB.OData.Typed.TypedDataSource">
+            <summary>
+            A data source that includes both the MongoServer needed to connect to MongoDB as well 
+            as the defining DataContext provided by the user.
+            </summary>
+        </member>
+        <member name="M:MongoDB.OData.Typed.TypedDataSource.#ctor(MongoDB.Driver.MongoServer,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MongoDB.OData.Typed.TypedDataSource"/> class.
+            </summary>
+            <param name="server">The server.</param>
+            <param name="dataContext">The data context.</param>
+        </member>
+        <member name="P:MongoDB.OData.Typed.TypedDataSource.DataContext">
+            <summary>
+            Gets the data context.
+            </summary>
+            <value>
+            The data context.
+            </value>
+        </member>
+        <member name="P:MongoDB.OData.Typed.TypedDataSource.Server">
+            <summary>
+            Gets the server.
+            </summary>
+            <value>
+            The server.
+            </value>
+        </member>
+        <member name="T:MongoDB.OData.MongoDataService`1">
+            <summary>
+            Base class for creating a WCF Data Service to connect to MongoDB.
+            </summary>
+            <typeparam name="TDataContext">The type of the data context.</typeparam>
+        </member>
+        <member name="M:MongoDB.OData.MongoDataService`1.Configure(System.Data.Services.DataServiceConfiguration)">
+            <summary>
+            Some basic configuration that should be used.
+            </summary>
+            <param name="config">The config.</param>
+        </member>
+        <member name="M:MongoDB.OData.MongoDataService`1.GetService(System.Type)">
+            <summary>
+            Gets the service object of the specified type.
+            </summary>
+            <param name="serviceType">An object that specifies the type of service object to get.</param>
+            <returns>
+            A service object of type <paramref name="serviceType" />.-or- null if there is no service object of type <paramref name="serviceType" />.
+            </returns>
+        </member>
+        <member name="M:MongoDB.OData.MongoDataService`1.CreateDataSource">
+            <summary>
+            Creates the data source.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MongoDB.OData.MongoDataService`1.CreateDataContext(MongoDB.Driver.MongoServer)">
+            <summary>
+            Creates the data context.
+            </summary>
+            <param name="server">The server.</param>
+            <returns>An instance of the data context.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:MongoDB.OData.MongoDataService`1.CreateMongoServer">
+            <summary>
+            Creates the mongo server.
+            </summary>
+            <returns>An instance of the MongoServer used for connecting to the mongodb servers.</returns>
+        </member>
+    </members>
+</doc>
